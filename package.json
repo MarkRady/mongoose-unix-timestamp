@@ -6,6 +6,22 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "mongodb",
+    "mongoose",
+    "plugin",
+    "timestamps",
+    "created_at",
+    "updated_at"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/MarkRady/mongoose-unix-timestamp"
+  },
+  "devDependencies": {
+    "mongoosastic": "^4.0.2",
+    "mongoose": "~4.5.3"
+  },
   "author": "Mark Rady",
-  "license": "ISC"
+  "license": "GNU"
 }
