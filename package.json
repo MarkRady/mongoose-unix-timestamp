@@ -1,0 +1,11 @@
+{
+  "name": "mongoose-unix-timestamp",
+  "version": "1.0.0",
+  "description": "it's will help you to generate automatic timestamps columns in database with unix format.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mark Rady",
+  "license": "ISC"
+}
