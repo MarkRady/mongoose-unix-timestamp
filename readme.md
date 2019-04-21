@@ -29,7 +29,7 @@ const user = new Schema({
 	email: String,
 });
 
-schema.plugin(unixTimestamp);
+user.plugin(unixTimestamp);
 
 const model = mongoose.model('User', user);
 ```
