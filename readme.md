@@ -8,7 +8,7 @@
 
 Mongoose-unix-timestamp uses a number of open source projects to work properly:
 * [node.js] - evented I/O for the backend
-* [Express] - fast node.js network app framework [@tjholowaychuk]
+* [Express] - fast node.js network app framework
 
 And of course this is open source and open to contribute on GitHub.
 
