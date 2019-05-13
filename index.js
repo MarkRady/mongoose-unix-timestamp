@@ -91,6 +91,45 @@ function plugin(schema) {
         next();
     });
 
+    schema.pre('updateMany', function (next) {
+        if (this.op === "updateMany") {
+            var newDate = new Date;
+            this._update = this._update || {};
+            if (created_at_column) {
+                if (this._update[created_at_column]) {
+                    delete this._update[created_at_column];
+                }
+                this._update['$setOnInsert'] = this._update['$setOnInsert'] || {};
+                this._update['$setOnInsert'][created_at_column] = newDate;
+            }
+            if (updated_at_column) {
+                this._update[updated_at_column] = newDate;
+            }
+        }
+        next();
+    });
+
+
+    schema.pre('updateOne', function (next) {
+        if (this.op === "updateOne") {
+            var newDate = new Date;
+            this._update = this._update || {};
+            if (created_at_column) {
+                if (this._update[created_at_column]) {
+                    delete this._update[created_at_column];
+                }
+                this._update['$setOnInsert'] = this._update['$setOnInsert'] || {};
+                this._update['$setOnInsert'][created_at_column] = newDate;
+            }
+            if (updated_at_column) {
+                this._update[updated_at_column] = newDate;
+            }
+        }
+        next();
+    });
+
+
+
     if(!schema.methods.hasOwnProperty('touch') && updated_at_column){
         schema.methods.touch = function(callback){
             this[updated_at_column] = new Date;
