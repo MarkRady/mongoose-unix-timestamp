@@ -20,7 +20,7 @@
     "url": "git://github.com/MarkRady/mongoose-unix-timestamp"
   },
   "devDependencies": {
-    "mongoose": "~5.5.1"
+    "mongoose": "~5.9.2"
   },
   "author": "Mark Rady",
   "license": "GNU"
